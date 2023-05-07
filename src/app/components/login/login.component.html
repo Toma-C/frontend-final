@@ -1,0 +1,48 @@
+<div class="container justify-content-center">
+  <div class="row">
+    <div class="col card mx-auto m-2">
+      <h2 class="card-title m-0">Login</h2>
+      <form [formGroup]="form" class="card-body my-1" (ngSubmit)="onSend($event)">
+        <div class="form-group">
+          <label for="exampleInputEmail1"> Correo </label>
+          <input
+            type="email"
+            [ngClass]="{'is-invalid':(Email?.hasError('required') || Email?.hasError('email'))&&Email?.touched}"
+            formControlName="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input
+          [ngClass]="{'is-invalid':Password?.hasError('required')&&Password?.touched}"
+            type="password"
+            formControlName="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="row my-1 mx-auto">
+          <button type="submit" class="btn">Ingresar</button>
+        </div>
+        <!-- Advertencias en caso de datos invalidos -->
+        <div *ngIf="Email?.hasError('email') && Email?.touched">
+          <p class="redhighlight">Correo no valido</p>
+        </div>
+        <div *ngIf="Email?.hasError('required') && Email?.touched">
+          <p class="redhighlight">Correo no valido</p>
+        </div>
+        <div *ngIf="Password?.hasError('required') && Password?.touched">
+          <p class="redhighlight">La contraseña es obligatoria</p>
+        </div>
+        <div class="row my-1 mx-auto">
+          <a class="btn my-20" routerLink="/portfolio">Ingresar como visitante</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="row justify-content-center">
+    <div class="card">
+        <h2 class="card-title">Mi historia academica</h2>
+        <div class="card-body">
+            <li *ngFor='let educacion of listaEducacion.slice().reverse()'>
+                <h3>{{educacion.titulo}}</h3>
+                <span class="highlight2">{{educacion.instituto}}</span>
+                <p>{{educacion.fecha_inicio}} - {{educacion.fecha_fin}} <br>
+            </li>
+        </div>
+    </div>
+</div>

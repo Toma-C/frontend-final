@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+    <div class="card">
+        <h2 class="card-title">Mi experiencia</h2>
+        <div class="card-body">
+            <li *ngFor='let puesto of listaExp'>
+                <h3> {{puesto.desc }} <span class="tab"></span></h3>
+                <span class="highlight2">{{puesto.tipo_exp}} </span>
+                <p>{{puesto.empresa}}<br>
+                {{puesto.fecha_inicio}} - {{puesto.fecha_fin}}</p>
+            </li>
+        </div>
+    </div>
+</div>

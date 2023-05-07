@@ -1,0 +1,26 @@
+{
+    "nombre": "Tomás Cravero",
+    "titulo": "Desarrollador Fullstack Jr.",
+    "educacion": [{
+        "titulo": "Licenciatura en Cs. de la Computacion",
+        "institucion": "Universidad Nacional de Rosario",
+        "estado": "en curso",
+        "comienzo": "2021",
+        "fin": "~"
+    },
+    {
+        "titulo": "Tecnico en Informatica Personal y Profesional",
+        "institucion": "EETP #394 Dr. Francisco Gurruchaga",
+        "estado": "completo",
+        "comienzo": "2014",
+        "fin": "2019"
+    }],
+    "experiencia":[{
+        "puesto": "Desarrollador fullstack NODE.js",
+        "tipo": "Pasantía",
+        "institucion": "NEMO GROUP",
+        "comienzo": "agosto 2019",
+        "fin": "diciembre 2019"
+    }]
+
+}
